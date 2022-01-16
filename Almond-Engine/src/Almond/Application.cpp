@@ -8,16 +8,15 @@ namespace Almond {
 
 	}
 
-	virtual Application::~Application()
+	Application::~Application()
 	{
 
 	}
 
-	Application::run()
+	void Application::run() 
 	{
 		while (true)
 		{
-
 		}
 	}
 

@@ -1,15 +1,20 @@
 #pragma once
 
+#include "core.h"
+
 namespace Almond {
 
-	class Application
+	class ALMOND_API Application
 	{
 
-	public:
+		public:
 
-		Application();
-		~Application();
+			Application();
+			virtual ~Application();
+
+			void run();
 
 	};
-
+		
+	Application* CreateApplication();
 }
