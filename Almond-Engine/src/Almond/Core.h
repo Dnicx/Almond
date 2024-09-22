@@ -13,5 +13,6 @@
     #ifdef ALMND_BUILD_DLL
         #error only suppoort windows
     #endif
+    // linux is probably extern
 
 #endif

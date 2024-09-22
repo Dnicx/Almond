@@ -14,6 +14,12 @@ class UniverseApp : public Almond::Application
 
 		}
 
+		void Update()
+		{
+			ALMOND_CLIENT_TRACE("hello from app ");
+		}
+
+
 };
 
 Almond::Application* Almond::CreateApplication()

@@ -4,9 +4,14 @@
 
 extern Almond::Application* Almond::CreateApplication();
 
-void main(int argc, char** argv)
+int main(int argc, char** argv)
 {
-	std::cout << "hello" << std::endl;
+
+	int a = 10;
+	Almond::Log::Init();
+	ALMOND_CORE_WARN("Init core logger");
+	ALMOND_CORE_INFO("Init client logger var={0}", a);
+
 	auto app = Almond::CreateApplication();
 	app->run();
 	delete app;

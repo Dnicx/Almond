@@ -12,6 +12,8 @@ namespace Almond {
 			Application();
 			virtual ~Application();
 
+			virtual void Update();
+
 			void run();
 
 	};

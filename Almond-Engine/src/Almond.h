@@ -2,12 +2,11 @@
 
 // --------- STANDARD INCLUDE --------------------
 
-#include <iostream>
-
 // --------- END STANDARD INCLUDE --------------------
 
 
 
+#include "Almond/Log.h"
 #include "Almond/Application.h"
 
 // --------- ENTRY POINT --------------------
