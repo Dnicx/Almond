@@ -1,3 +1,6 @@
 [submodule "Almond-Engine/vendor/spdlog"]
 	path = Almond-Engine/vendor/spdlog
 	url = https://github.com/gabime/spdlog.git
+[submodule "Almond-Engine/vendor/GLFW"]
+	path = Almond-Engine/vendor/GLFW
+	url = https://github.com/glfw/glfw.git

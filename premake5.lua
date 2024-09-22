@@ -10,6 +10,11 @@ workspace "Almond-Engine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories for vendor lib
+VendorIncludeDir = {}
+VendorIncludeDir["GLFW"] = "Almond-Engine/vendor/GLFW/include "
+
+
 project "universe"
     location "universe"
     kind "ConsoleApp"
@@ -78,7 +83,20 @@ project "Almond-Engine"
 
     includedirs
     {
-        "%{prj.name}/vendor/spdlog/include"        
+        "%{prj.name}/src",
+        "%{prj.name}/vendor/spdlog/include",
+        "%{VendorIncludeDir.GLFW}"
+    }
+
+    libdirs
+    {
+        "%{prj.name}/vendor/GLFW/build/install/x64-Debug/lib"
+    }
+
+    links
+    {
+        "opengl32.lib",
+        "glfw3"
     }
 
     filter "system:windows"
