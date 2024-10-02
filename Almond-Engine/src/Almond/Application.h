@@ -2,6 +2,8 @@
 
 #include "core.h"
 
+#include "Events/Event.h"
+
 namespace Almond {
 
 	class ALMOND_API Application

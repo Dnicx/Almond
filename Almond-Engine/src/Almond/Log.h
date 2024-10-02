@@ -2,6 +2,7 @@
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Almond
 {
@@ -35,5 +36,5 @@ namespace Almond
 #define ALMOND_CLIENT_ERROR(...) 		::Almond::Log::GetClientLogger()->error(__VA_ARGS__)
 #define ALMOND_CLIENT_CRITICAL(...) 	::Almond::Log::GetClientLogger()->critical(__VA_ARGS__)
 
-#define ALMOND_CORE_TRACE
-#define ALMOND_CORE_WARN
+// #define ALMOND_CORE_TRACE
+// #define ALMOND_CORE_WARN

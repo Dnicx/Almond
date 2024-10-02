@@ -3,6 +3,7 @@
 
 class UniverseApp : public Almond::Application
 {
+
 	public:
 		UniverseApp()
 		{
