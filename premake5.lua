@@ -101,13 +101,15 @@ project "Almond-Engine"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
+        staticruntime "off" -- NOTE!!! THIS is because we don't use GLFW premake
+        runtime "Debug"
         systemversion "latest"
 
         defines
         {
             "ALMND_PLATFORM_WINDOWS",
-            "ALMND_BUILD_DLL"
+            "ALMND_BUILD_DLL",  
+            "ALMND_ENABLE_ASSERTS"
         }
         
         postbuildcommands

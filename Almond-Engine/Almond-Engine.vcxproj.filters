@@ -1,41 +1,69 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="src\Almond\Log.cpp" />
-    <ClCompile Include="src\aepch.cpp" />
-    <ClCompile Include="src\Almond\Application.cpp">
-      <Filter>Soruce</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Almond\CodeTimer.cpp">
-      <Filter>Soruce</Filter>
-    </ClCompile>
+    <Filter Include="Almond">
+      <UniqueIdentifier>{20585EA7-0CFA-887D-F5B4-9CD1E1F50FCE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Almond\Events">
+      <UniqueIdentifier>{04A07BE6-7060-F71C-399B-409AA51A3CF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Almond.h" />
-    <ClInclude Include="src\Almond\Log.h" />
-    <ClInclude Include="src\aepch.h" />
-    <ClInclude Include="src\Almond\Events\KeyboardEvent.h">
-      <Filter>Soruce</Filter>
-    </ClInclude>
     <ClInclude Include="src\Almond\Application.h">
-      <Filter>Soruce</Filter>
+      <Filter>Almond</Filter>
     </ClInclude>
     <ClInclude Include="src\Almond\CodeTimer.h">
-      <Filter>Soruce</Filter>
+      <Filter>Almond</Filter>
     </ClInclude>
     <ClInclude Include="src\Almond\Core.h">
-      <Filter>Soruce</Filter>
+      <Filter>Almond</Filter>
     </ClInclude>
     <ClInclude Include="src\Almond\EntryPoint.h">
-      <Filter>Soruce</Filter>
+      <Filter>Almond</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Almond\Events\ApplicationEvent.h">
+      <Filter>Almond\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Almond\Events\Event.h">
-      <Filter>Soruce</Filter>
+      <Filter>Almond\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Almond\Events\KeyboardEvent.h">
+      <Filter>Almond\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Almond\Events\MouseEvent.h">
+      <Filter>Almond\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Almond\Log.h">
+      <Filter>Almond</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Almond\Window.h">
+      <Filter>Almond</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\aepch.h" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Soruce">
-      <UniqueIdentifier>{d73e36ba-f212-4178-bd1e-5773e3811a07}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="src\Almond\Application.cpp">
+      <Filter>Almond</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Almond\CodeTimer.cpp">
+      <Filter>Almond</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Almond\Log.cpp">
+      <Filter>Almond</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\aepch.cpp" />
   </ItemGroup>
 </Project>

@@ -7,11 +7,14 @@
 #include "Almond/Events/ApplicationEvent.h"
 #include "Almond/Log.h"
 
+#include <GLFW/glfw3.h>
+
 namespace Almond {
 
 	Application::Application()
 	{
 		countTimeee();
+		m_Window = std::unique_ptr< Window >( Window::Create());
 	}
 
 	Application::~Application()
@@ -24,8 +27,10 @@ namespace Almond {
 		std::cerr << "update not define" << std::endl;
 	}
 
-	void Application::run() 
+	void Application::Run() 
 	{
+
+		m_Running = true;
 
 		WindowResizeEvent windowResize( 540, 270 );
 
@@ -37,10 +42,14 @@ namespace Almond {
 		if ( windowResize.IsInCategory( EventCategoryInput ))
 			ALMOND_CORE_TRACE( windowResize );
 
-		while (true)
+		glClearColor( 0.5, 0, 0.5, 1 );
+
+		while ( m_Running )
 		{
 			
-			
+			m_Window->OnUpdate();
+			glClear( GL_COLOR_BUFFER_BIT );
+
 			// this->Update();
 
 		}

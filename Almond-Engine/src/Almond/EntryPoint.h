@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 	ALMOND_CORE_INFO("Init client logger var={0}", a);
 
 	auto app = Almond::CreateApplication();
-	app->run();
+	app->Run();
 	delete app;
 }
 

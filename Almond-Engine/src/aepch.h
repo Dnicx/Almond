@@ -12,6 +12,8 @@
 #include <functional>
 #include <sstream>
 
+#include "Almond/Log.h"
+
 #ifdef ALMND_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif

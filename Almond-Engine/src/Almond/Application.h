@@ -4,6 +4,8 @@
 
 #include "Events/Event.h"
 
+#include "Window.h"
+
 namespace Almond {
 
 	class ALMOND_API Application
@@ -16,7 +18,12 @@ namespace Almond {
 
 			virtual void Update();
 
-			void run();
+			void Run();
+
+		private:
+
+			std::unique_ptr< Window > m_Window;
+			bool m_Running = false;
 
 	};
 		
