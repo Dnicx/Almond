@@ -71,7 +71,7 @@ namespace Almond
 		public:
 
 			WindowMoveEvent() {}
-
+				
 			EVENT_CLASS_CATEGORY( EventCategoryApplication )
 			EVENT_CLASS_TYPE( WindowMove )
 	};

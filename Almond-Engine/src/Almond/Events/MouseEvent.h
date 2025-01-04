@@ -110,6 +110,7 @@ namespace Almond
 			MouseButtonEvent(int button)
 				: m_Button(button) {}
 
+			int m_Button;
 		//********************* 
 		//
 		//	private
@@ -117,7 +118,6 @@ namespace Almond
 		//**********************
 
 		private:
-			int m_Button;
 	};
 
 	class ALMOND_API MouseButtonPressedEvent : public MouseButtonEvent

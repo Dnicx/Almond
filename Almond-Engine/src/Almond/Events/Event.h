@@ -85,7 +85,7 @@ namespace Almond
 
 	class ALMOND_API EventDispatcher
 	{
-		// event func is a function that will retrun bool?
+		// eventFunc is a function that will retrun bool?
 		template<typename T> 
 		using EventFunc = std::function<bool( T& )>;
 
@@ -97,21 +97,27 @@ namespace Almond
 
 		public:
 
+			// construct event to be dispatch ( kind of like loading a canon)
 			EventDispatcher( Event& event )
 				: m_Event(event)
 			{
 			}
 
 			// TODO: learn more about this
+			// 	Dispatch is kind of like firing the canon with the loaded canonball ( m_Event )
+			// 		by checking if event type match with template event type
+			// 
+			// 	By dispatching, it means calling "func"
+			// 	using EventFunc, we can ensure func is a function that will take T as argument
 			template< typename T > 
 			bool Dispatch( EventFunc< T > func )
 			{
 				if( m_Event.GetEventType() == T::GetStaticType() )
 				{
 					m_Event.m_Handled = func( *(T*)&m_Event );
-					return true
+					return true;
 				}
-				return false
+				return false;
 			}
 
 		//********************* 

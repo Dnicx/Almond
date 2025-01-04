@@ -1,6 +1,6 @@
 #pragma once
 
-#include "aepch.h"
+#include "Event.h"
 
 namespace Almond
 {
@@ -42,7 +42,7 @@ namespace Almond
 
 		public:
 
-			KeyPressedEvent( int keycode, int repeatCount ):
+			KeyPressedEvent( int keycode, int repeatCount )
 				: KeyEvent( keycode ), m_RepeatCount( repeatCount ) {}
 
 			inline int GetRepeatcount() { return m_RepeatCount; }
@@ -55,7 +55,7 @@ namespace Almond
 			}
 
 			// define specific event type in concrete class
-			EVENT_CLASS_TYPE( KeyPressed )
+			EVENT_CLASS_TYPE( KeyPressed );
 
 		//********************* 
 		//
@@ -78,10 +78,8 @@ namespace Almond
 
 		public:
 
-			KeyReleasedEvent( int keycode, int repeatCount ):
-				: KeyEvent( keycode ), m_RepeatCount( repeatCount ) {}
-
-			inline int GetRepeatcount() { return m_RepeatCount; }
+			KeyReleasedEvent( int keycode )
+				: KeyEvent( keycode ) {}
 
 			std::string ToString() const override
 			{
@@ -91,17 +89,7 @@ namespace Almond
 			}
 
 			// define specific event type in concrete class
-			EVENT_CLASS_TYPE( KeyReleased )
-
-		//********************* 
-		//
-		//	private
-		//
-		//**********************
-
-		private:
-
-			int m_RepeatCount;
+			EVENT_CLASS_TYPE( KeyReleased );
 
 	};
 }

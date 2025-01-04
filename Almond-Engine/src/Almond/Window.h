@@ -34,7 +34,7 @@ namespace Almond
 			virtual unsigned int GetHeight() const = 0;
 
 			// window attr
-			virtual void SetEventCallback( EventCallbackFunc& callback ) = 0;
+			virtual void SetEventCallback( const EventCallbackFunc& callback ) = 0;
 			virtual void SetVSync( bool isEnable ) = 0;
 			virtual bool IsVSync() const = 0;
 
