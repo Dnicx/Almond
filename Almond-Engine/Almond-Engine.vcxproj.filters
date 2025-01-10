@@ -34,11 +34,17 @@
     <ClInclude Include="src\Almond\Events\Event.h">
       <Filter>Almond\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Almond\Events\KeyboardEvent.h">
+    <ClInclude Include="src\Almond\Events\KeyEvent.h">
       <Filter>Almond\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Almond\Events\MouseEvent.h">
       <Filter>Almond\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Almond\Layer.h">
+      <Filter>Almond</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Almond\LayerStack.h">
+      <Filter>Almond</Filter>
     </ClInclude>
     <ClInclude Include="src\Almond\Log.h">
       <Filter>Almond</Filter>
@@ -56,6 +62,12 @@
       <Filter>Almond</Filter>
     </ClCompile>
     <ClCompile Include="src\Almond\CodeTimer.cpp">
+      <Filter>Almond</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Almond\Layer.cpp">
+      <Filter>Almond</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Almond\LayerStack.cpp">
       <Filter>Almond</Filter>
     </ClCompile>
     <ClCompile Include="src\Almond\Log.cpp">

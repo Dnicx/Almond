@@ -8,6 +8,7 @@
 
 #include "Almond/Log.h"
 #include "Almond/Application.h"
+#include "Almond/Layer.h"
 
 // --------- ENTRY POINT --------------------
 #include "Almond/EntryPoint.h"

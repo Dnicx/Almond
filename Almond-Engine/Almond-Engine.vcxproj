@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -111,6 +112,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -139,6 +141,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -161,8 +164,10 @@
     <ClInclude Include="src\Almond\EntryPoint.h" />
     <ClInclude Include="src\Almond\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Almond\Events\Event.h" />
-    <ClInclude Include="src\Almond\Events\KeyboardEvent.h" />
+    <ClInclude Include="src\Almond\Events\KeyEvent.h" />
     <ClInclude Include="src\Almond\Events\MouseEvent.h" />
+    <ClInclude Include="src\Almond\Layer.h" />
+    <ClInclude Include="src\Almond\LayerStack.h" />
     <ClInclude Include="src\Almond\Log.h" />
     <ClInclude Include="src\Almond\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
@@ -171,6 +176,8 @@
   <ItemGroup>
     <ClCompile Include="src\Almond\Application.cpp" />
     <ClCompile Include="src\Almond\CodeTimer.cpp" />
+    <ClCompile Include="src\Almond\Layer.cpp" />
+    <ClCompile Include="src\Almond\LayerStack.cpp" />
     <ClCompile Include="src\Almond\Log.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\aepch.cpp">

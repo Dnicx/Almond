@@ -19,12 +19,24 @@ namespace Almond {
 
 		// bind all EventCallback to OnEvent
 		m_Window->SetEventCallback( BIND_EVENT_FN( OnEvent ) );
+
 	}
 
 	Application::~Application()
 	{
-
+		
 	}
+
+	void Application::PushLayer( Layer* layer )
+	{
+		m_LayerStack.PushLayer( layer );
+	}
+
+	void Application::PushOverlay( Layer* layer )
+	{
+		m_LayerStack.PushOverlay( layer );
+	}
+
 
 	void Application::OnEvent( Event& event )
 	{
@@ -34,6 +46,15 @@ namespace Almond {
 		// if event in dispatcher match "WindowCloseEvent", it will call Application::OnWindowClose
 		dispatcher.Dispatch<WindowCloseEvent>( BIND_EVENT_FN( OnWindowClose ) );
 		dispatcher.Dispatch<WindowResizeEvent>( BIND_EVENT_FN( OnWindowResize ) );
+
+		// iterate layer in reverse order
+		for( auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
+		{
+			--it;
+			(*it)->OnEvent( event );
+			if ( event.Handled )
+				break;
+		}
 
 		ALMOND_CORE_INFO( "OnEvent::{0}", event );
 	}
@@ -53,6 +74,7 @@ namespace Almond {
 	void Application::Update()
 	{
 		std::cerr << "update not define" << std::endl;
+
 	}
 
 	void Application::Run() 
@@ -78,7 +100,7 @@ namespace Almond {
 			m_Window->OnUpdate();
 			glClear( GL_COLOR_BUFFER_BIT );
 
-			// this->Update();
+			this->Update();
 
 		}
 	}

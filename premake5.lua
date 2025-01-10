@@ -52,14 +52,17 @@ project "universe"
     
     filter "configurations:Debug"
         defines "ALMND_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "ALMND_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "ALMND_DIST"
+        buildoptions "/MD"
         optimize "On"
 
 
@@ -119,12 +122,15 @@ project "Almond-Engine"
 
     filter "configurations:Debug"
         defines "ALMND_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "ALMND_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "ALMND_DIST"
+        buildoptions "/MD"
         optimize "On"

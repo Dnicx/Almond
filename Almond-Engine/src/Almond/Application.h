@@ -8,6 +8,9 @@
 
 #include "Events/ApplicationEvent.h"
 
+#include "Layer.h"
+#include "LayerStack.h"
+
 
 namespace Almond {
 
@@ -25,6 +28,9 @@ namespace Almond {
 
 			void OnEvent( Event& event );
 
+			void PushLayer( Layer* layer );
+			void PushOverlay( Layer* layer );
+
 		private:
 
 			bool OnWindowClose( WindowCloseEvent& event );
@@ -32,6 +38,8 @@ namespace Almond {
 
 			std::unique_ptr< Window > m_Window;
 			bool m_Running = false;
+
+			LayerStack m_LayerStack;
 
 	};
 		
