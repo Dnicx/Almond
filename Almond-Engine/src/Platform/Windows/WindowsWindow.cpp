@@ -5,6 +5,8 @@
 #include "Almond/Events/KeyEvent.h"
 #include "Almond/Events/MouseEvent.h"
 
+#include <glad/glad.h>
+
 namespace Almond
 {
 	static bool s_GlfwInitialized = false;
@@ -54,6 +56,8 @@ namespace Almond
 
 		glfwMakeContextCurrent( m_Window );
 
+		int status = gladLoadGLLoader( (GLADloadproc)glfwGetProcAddress );
+		ALMOND_CORE_ASSERT( status, "Failed to init GLAD!!") ;
 		// associate m_data to the window
 		glfwSetWindowUserPointer( m_Window, &m_Data );
 

@@ -34,6 +34,6 @@
 .vs/
 *.user
 
-/bin
+bin/
 /bin-intermediate
-/bin-int
+bin-int/

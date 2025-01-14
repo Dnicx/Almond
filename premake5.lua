@@ -12,7 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories for vendor lib
 VendorIncludeDir = {}
-VendorIncludeDir["GLFW"] = "Almond-Engine/vendor/GLFW/include "
+VendorIncludeDir["GLFW"] = "Almond-Engine/vendor/GLFW/include"
+VendorIncludeDir["Glad"] = "Almond-Engine/vendor/Glad/include"
+
+include "Almond-Engine/vendor/Glad"
 
 
 project "universe"
@@ -88,7 +91,8 @@ project "Almond-Engine"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{VendorIncludeDir.GLFW}"
+        "%{VendorIncludeDir.GLFW}",
+        "%{VendorIncludeDir.Glad}"
     }
 
     libdirs
@@ -99,7 +103,8 @@ project "Almond-Engine"
     links
     {
         "opengl32.lib",
-        "glfw3"
+        "glfw3",
+        "Glad"
     }
 
     filter "system:windows"
@@ -112,7 +117,8 @@ project "Almond-Engine"
         {
             "ALMND_PLATFORM_WINDOWS",
             "ALMND_BUILD_DLL",  
-            "ALMND_ENABLE_ASSERTS"
+            "ALMND_ENABLE_ASSERTS",
+            "GLFW_INCLUDE_NONE"
         }
         
         postbuildcommands
